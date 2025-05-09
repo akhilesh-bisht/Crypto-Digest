@@ -1,35 +1,62 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// import React from "react";
+// import Navbar from "./components/Navbar";
+// import bg from "../src/assets/bg.jpg";
+// import bg2 from "../src/assets/bg-2.png";
+
+// function App() {
+//   return (
+//     <div
+//       className="w-full h-screen flex justify-center items-center"
+//       style={{
+//         backgroundImage: `
+//           linear-gradient(rgba(16, 20, 24, 0.6), rgba(16, 20, 24, 0.6)),
+//           url(${bg2}),
+//           url(${bg})
+//         `,
+//         backgroundSize: "100% 100%, 100% 100%, 100% 100%",
+//         backgroundPosition: "top left, top left, top left",
+//         backgroundRepeat: "no-repeat, no-repeat, no-repeat",
+//         backgroundAttachment: "scroll, scroll, scroll",
+//       }}
+//     >
+//       <div className="w-full max-w-[1440px] h-[810px]">
+//         <Navbar />
+//         {/* Add page content here */}
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+import React from "react";
+import Navbar from "./components/Navbar";
+import MainContent from "./components/MainContent";
+import bg from "./assets/bg.jpg";
+import bg2 from "./assets/bg-2.png";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div
+      className="w-full h-screen flex justify-center items-center"
+      style={{
+        backgroundImage: `
+          linear-gradient(rgba(16,20,24,.6), rgba(16,20,24,.6)),
+          url(${bg2}),
+          url(${bg})
+        `,
+        backgroundSize: "100% 100%, 100% 100%, 100% 100%",
+        backgroundPosition: "top left, top left, top left",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "scroll",
+      }}
+    >
+      <div className="w-full max-w-[1440px] h-[810px]">
+        <Navbar />
+        <MainContent />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
